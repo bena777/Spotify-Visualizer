@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Visualizer</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login-style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='spotify-logo.png') }}" alt="Spotify Logo" class="spotify-logo">
+    <h1>Spotify Visualizer</h1>
+    <a href="{{ url_for('spotify_login') }}" class="spotify-button">Sign in with Spotify</a>
+  </div>
+</body>
+</html>

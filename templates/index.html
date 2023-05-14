@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Spotify App</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>All-Time Listened to Songs and Artists on Spotify</h1>
+
+    <div class="flex-container">
+      <div class="left-column">
+        <h2>Artists</h2>
+        <div id="artistList">
+          {% for artist in artists %}
+          <p><span class="rank">{{ artist.rank }}</span> {{ artist.name }}</p>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="right-column">
+        <h2>Songs</h2>
+        <div id="songList">
+          {% for song in songs %}
+          <p><span class="rank">{{ song.rank }}</span> {{ song.name }} - {{ song.artist }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

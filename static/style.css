@@ -1,0 +1,64 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #191414;
+  color: #1DB954;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #FFFFFF;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.left-column {
+  flex: 1;
+}
+
+.right-column {
+  flex: 1;
+}
+
+.artistList,
+.songList {
+  margin-top: 20px;
+}
+
+.artistList p,
+.songList p {
+  margin: 0;
+}
+
+.rank {
+  display: inline-block;
+  width: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    flex: none;
+  }
+}
